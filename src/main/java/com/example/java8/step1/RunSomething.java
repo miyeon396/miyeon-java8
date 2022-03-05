@@ -17,3 +17,4 @@ public interface RunSomething {
 
     } //java 8 부터 인터페이스 정의 메서드 형태가 더욱 다양해 짐. default, static 등
 }
+
