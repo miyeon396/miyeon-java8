@@ -79,8 +79,16 @@ public class App {
     //api의 설계나 제공하는 라이브러리 쪽에서 변화가 생김
     //인터페이스에 추상메서드 3개 있다고 할 때 -> 해당 인터페이스를 구현하는 추상클래스를 하나 만들고 비어있는 구현을 만듦. 5,6년전쯤 클래스들. a는 a만 구현하고 b는 b만 구현하고 c는 c만 구현하게 abstract를 만들어놓음
     //편의성을 위해 상속을 사용
-    //근데 이 편의성을 이젠 인터페이스가 해줌 -> 기본 메서드를 사용해서 abc해놓음. -> 그럼 실제 구현해야하는 클래스는 interface를 implements를 . 비 침투성 개발자들에게 상속을 강제하지 않는 비 침투성을 스프링이 강조함.
-    //ex) WebMvcConfigure / WebMvcConfigurer -> Deprecated
+    //ex) I : a(), b(), c()
+    //   AbstactClass a(), b(),c() 껍데기
+    // A - a(), B - b(), C- c() // 각 클래스에서 위 abstract 구현
+
+    //근데 이 편의성을 이젠 인터페이스가 해줌 -> 기본 메서드를 사용해서 abc해놓음. -> 그럼 실제 구현해야하는 클래스는 interface를 implements로 구현. 상속이 자유로움 비 침투성 개발자들에게 상속을 강제하지 않는 비 침투성을 스프링이 강조함.
+    //ex) I : a(), b(), c()
+    // A - a(), B - b(), C- c() // 각 클래스에서 위 인터페이스 구현 그치만 default를 이용해서
+    //코드는 훨씬 간결해 지고 똑같은 걸 할 수 있는거
+    //ex) WebMvcConfigure / WebMvcConfigurer -> Deprecated -> default를 이용하여 변경
+
     //-> 자바 8 이후 부터는 기본 메서드 이용해서 api 좀더 간결하게 제공할 수 있음.
     
 }
